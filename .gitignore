@@ -1,0 +1,18 @@
+# bağımlılıklar
+/node_modules
+
+# next
+/.next
+/out
+next-env.d.ts
+*.tsbuildinfo
+
+# ortam değişkenleri — demo anahtarları burada, repoya girmemeli
+.env
+.env.local
+.env*.local
+
+# sistem
+.DS_Store
+*.pem
+npm-debug.log*
