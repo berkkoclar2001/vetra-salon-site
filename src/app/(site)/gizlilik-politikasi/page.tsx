@@ -6,7 +6,7 @@ import { pageMetadata, siteConfig } from "@/lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Gizlilik Politikası",
   description:
-    "Vetra'yı kullanan salonların panele girdiği kayıtların kime ait olduğu, bu kayıtlarla ne yaptığımız ve asla yapmadığımız, verilerin nasıl korunduğu, dışa aktarıldığı ve silindiği.",
+    "Vetra'yı kullanan salonların panele girdiği kayıtların kime ait olduğu, Vetra mobil uygulamasının hangi verileri işlediği, bu kayıtlarla ne yaptığımız ve asla yapmadığımız, verilerin nasıl korunduğu, dışa aktarıldığı ve silindiği.",
   path: "/gizlilik-politikasi",
 });
 
@@ -22,6 +22,37 @@ const neverDo = [
   "Üyelerinizle kendi adımıza iletişime geçmez, onlara kampanya veya teklif göndermeyiz.",
   "Üye listenizi başka bir salona, rakibinize ya da bir veri şirketine aktarmayız.",
   "Kayıtlarınızı, sizi veya üyelerinizi tanımlayabilecek şekilde başka bir amaçla kullanmayız.",
+];
+
+/**
+ * Mobil uygulamanın işlediği veriler. App Store 5.1.1 gereği uygulamanın App Privacy formuyla
+ * birebir uyuşmalı; uygulamaya yeni bir veri, izin veya SDK eklenirse bu liste de güncellenmeli.
+ */
+const mobileData = [
+  {
+    label: "Hesap",
+    text: "Telefon numarası, şifre, ad-soyad, üye numarası ve isteğe bağlı e-posta adresi.",
+  },
+  {
+    label: "Profil",
+    text: "İsteğe bağlı profil fotoğrafı ve acil durum kişisi. Bu bilgileri üye kendisi girer.",
+  },
+  {
+    label: "Salon kaydı",
+    text: "Doğum tarihi, cinsiyet, sağlık kayıtları ve notları, antrenman ve beslenme programları, paket ve ödeme kayıtları, yoklama. Bu kayıtları üyesi olduğunuz salon girer.",
+  },
+  {
+    label: "Uygulama kullanımı",
+    text: "Ders rezervasyonları, ön kayıt talepleri ve bu taleplere eklenen notlar, üyelik sözleşmesi onayı.",
+  },
+  {
+    label: "Bildirimler",
+    text: "Size bildirim gönderebilmek için cihazınıza ait bir bildirim anahtarı kaydedilir. Bildirimler Google Firebase Cloud Messaging ve Apple Push Notification service üzerinden iletilir. Firebase bu sırada cihaz modeli, dil, saat dilimi ve işletim sistemi sürümü bilgilerini işler.",
+  },
+  {
+    label: "İzinler",
+    text: "Kamera ve fotoğraf galerisi yalnızca profil fotoğrafı için, takvim yalnızca rezervasyonunuzu takviminize eklemek için (yalnızca yazma) kullanılır.",
+  },
 ];
 
 const access = [
@@ -48,11 +79,11 @@ export default function PrivacyPolicyPage() {
     <LegalPage
       title="Gizlilik Politikası"
       description="Salonunuzun Vetra'ya girdiği üye, ders ve ödeme kayıtları size aittir. Bu sayfada o kayıtlarla ne yaptığımızı, ne yapmadığımızı ve kontrolün nasıl sizde kaldığını anlatıyoruz."
-      updated="17 Eylül 2026"
+      updated="27 Eylül 2026"
     >
       <p>
         Bu politika, <strong>{legalName}</strong> (&quot;Vetra&quot;, &quot;biz&quot;) tarafından sunulan salon
-        yönetim paneline ve bu tanıtım sitesine uygulanır. Vetra ile yaptığınız hizmet sözleşmesinin bir parçasıdır.
+        yönetim paneline, Vetra mobil uygulamasına ve bu tanıtım sitesine uygulanır. Vetra ile yaptığınız hizmet sözleşmesinin bir parçasıdır.
         Hangi kişisel verileri hangi hukuki sebeple işlediğimizi ve 6698 sayılı Kanun&apos;dan doğan haklarınızı ayrıca{" "}
         <Link href="/kvkk">KVKK Aydınlatma Metni</Link>&apos;nde, tarayıcınızda tutulan kayıtları ise{" "}
         <Link href="/cerez-politikasi">Çerez Politikası</Link>&apos;nda bulabilirsiniz.
@@ -84,14 +115,29 @@ export default function PrivacyPolicyPage() {
         kullanım ölçümlerine bakabiliriz. Bu ölçümler hiçbir salon, kullanıcı veya üyeyle ilişkilendirilemez.
       </p>
 
-      <h2>3. Asla yapmadıklarımız</h2>
+      <h2>3. Mobil uygulama</h2>
+      <p>Vetra mobil uygulamasını kullanan salon üyelerinin şu verileri işlenir:</p>
+      <ul>
+        {mobileData.map((item) => (
+          <li key={item.label}>
+            <strong>{item.label}:</strong> {item.text}
+          </li>
+        ))}
+      </ul>
+      <p>
+        Uygulama konum verisi toplamaz; reklam kimliği ve üçüncü taraf analitik araçları kullanmaz. Verileriniz reklam
+        ya da takip amacıyla kimseyle paylaşılmaz. Hizmet sağlayıcılarımız verilerinizi yalnızca bu hizmeti sunmak için
+        ve bu politikadakine eşdeğer koruma altında işler.
+      </p>
+
+      <h2>4. Asla yapmadıklarımız</h2>
       <ul>
         {neverDo.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
 
-      <h2>4. Kayıtlarınızı kim görebilir?</h2>
+      <h2>5. Kayıtlarınızı kim görebilir?</h2>
       <div className="overflow-x-auto">
         <table>
           <thead>
@@ -116,7 +162,7 @@ export default function PrivacyPolicyPage() {
         <Link href="/kvkk">KVKK Aydınlatma Metni</Link>&apos;nde açıklanmıştır.
       </p>
 
-      <h2>5. Güvenlik</h2>
+      <h2>6. Güvenlik</h2>
       {/* KVKK sayfasındaki tedbirlerle aynı kalmalı; ikisi de backend ile teyit edilmeli. */}
       <p>
         Panel ve site bağlantıları şifreli (HTTPS) kurulur, erişim rol bazlı yetkilerle sınırlanır ve kayıtlar düzenli
@@ -130,7 +176,7 @@ export default function PrivacyPolicyPage() {
         herkese yalnız işinin gerektirdiği yetkiyi verin.
       </p>
 
-      <h2>6. Sözleşmeniz sona erdiğinde</h2>
+      <h2>7. Sözleşmeniz sona erdiğinde</h2>
       {/* Süre ve dosya biçimi operasyonla teyit edilmeli. */}
       <ul>
         <li>
@@ -147,7 +193,7 @@ export default function PrivacyPolicyPage() {
         </li>
       </ul>
 
-      <h2>7. Silme talepleri</h2>
+      <h2>8. Silme talepleri</h2>
       <h3>Salon sahibi veya yetkilisiyseniz</h3>
       <p>
         Tek tek üye kayıtlarını panelden kendiniz silebilirsiniz. Salonunuzun tüm kayıtlarının silinmesini istiyorsanız,
@@ -164,14 +210,14 @@ export default function PrivacyPolicyPage() {
         bilgilerinizin salon tarafından görüntülenemeyeceğini hatırlatırız.
       </p>
 
-      <h2>8. Bu politikadaki değişiklikler</h2>
+      <h2>9. Bu politikadaki değişiklikler</h2>
       <p>
         Politikayı güncellediğimizde yeni metni bu sayfada yayımlar, sayfanın başındaki tarihi değiştiririz.
         Kayıtlarınızın kullanımını genişleten önemli bir değişiklik olursa, yürürlüğe girmeden en az 15 gün önce
         müşterilerimize e-postayla haber veririz.
       </p>
 
-      <h2>9. Bize ulaşın</h2>
+      <h2>10. Bize ulaşın</h2>
       <p>
         Gizlilikle ilgili her sorunuz için <a href={`mailto:${contact.email}`}>{contact.email}</a> adresine yazabilir
         veya {contact.phone} numaralı telefondan bize ulaşabilirsiniz.
