@@ -29,8 +29,19 @@ export const navItems: NavEntry[] = [
 
 /** Hukuki metinler: footer'daki yasal metinler sütunu ve sitemap buradan okur. */
 export const legalLinks = [
-  { label: "Kullanıcı Sözleşmesi", href: "/kullanici-sozlesmesi" },
+  { label: "Hizmet Sözleşmesi", href: "/kullanici-sozlesmesi" },
+  { label: "Üye Kullanım Koşulları", href: "/uye-kullanim-kosullari" },
   { label: "Gizlilik Politikası", href: "/gizlilik-politikasi" },
   { label: "KVKK Aydınlatma Metni", href: "/kvkk" },
   { label: "Çerez Politikası", href: "/cerez-politikasi" },
+];
+
+/**
+ * Üye uygulamasının açtığı sayfaların (/destek, /uye-kullanim-kosullari) altındaki bağlantılar.
+ * App Store 3.1.1: buraya fiyat, iletişim veya tanıtım sayfası eklenmemeli.
+ */
+export const memberLinks = [
+  { label: "Üye Kullanım Koşulları", href: "/uye-kullanim-kosullari" },
+  { label: "Gizlilik Politikası", href: "/gizlilik-politikasi" },
+  { label: "KVKK Aydınlatma Metni", href: "/kvkk" },
 ];

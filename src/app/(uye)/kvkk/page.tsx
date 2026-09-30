@@ -21,13 +21,13 @@ const situations = [
   {
     when: "Bize WhatsApp, telefon veya e-postayla ulaştığınızda",
     data: "Adınız, telefon numaranız, e-posta adresiniz, işletmenizin adı ve türü, mesajınızın içeriği.",
-    purpose: "Sorunuzu yanıtlamak, demo veya teklif hazırlamak, size uygun paketi belirlemek.",
+    purpose: "Sorunuzu yanıtlamak ve talep ettiğiniz bilgiyi hazırlamak.",
     basis: "Sözleşme öncesi görüşmeler için sözleşmenin kurulmasıyla doğrudan ilgili olması (m. 5/2-c).",
     method: "Sizin bize iletmenizle, elektronik ortamda.",
   },
   {
     when: "Vetra müşterisi olduğunuzda",
-    data: "Yetkili kişinin kimlik ve iletişim bilgileri, fatura bilgileri (vergi dairesi ve numarası, gerekirse T.C. kimlik numarası), abonelik ve ödeme kayıtları, destek yazışmaları.",
+    data: "Yetkili kişinin kimlik ve iletişim bilgileri, fatura bilgileri (vergi dairesi ve numarası, gerekirse T.C. kimlik numarası), hizmet ve ödeme kayıtları, destek yazışmaları.",
     purpose: "Hizmet sözleşmesini yürütmek; kurulum, eğitim ve destek vermek; faturalandırmak; muhasebe ve vergi kayıtlarını tutmak.",
     basis: "Sözleşmenin ifası (m. 5/2-c) ve vergi ile ticaret mevzuatından doğan hukuki yükümlülüklerimiz (m. 5/2-ç).",
     method: "Sizden, sözleşme ve fatura süreçlerinde; elektronik ortamda veya yazılı olarak.",
@@ -94,7 +94,7 @@ export default function KvkkPage() {
     <LegalPage
       title="KVKK Aydınlatma Metni"
       description="Kişisel verilerinizi ne zaman, neden ve nasıl işlediğimizi; kimlerle paylaştığımızı ve haklarınızı nasıl kullanacağınızı sade bir dille anlatıyoruz."
-      updated="17 Eylül 2026"
+      updated="30 Eylül 2026"
     >
       <h2>Kısaca</h2>
       <ul>

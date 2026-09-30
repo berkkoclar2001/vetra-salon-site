@@ -250,7 +250,7 @@ export default function CerezPolitikasiPage() {
       <h2>10. İletişim</h2>
       <p>
         Bu politika hakkındaki sorularınız için <a href={`mailto:${contact.email}`}>{contact.email}</a> adresine
-        yazabilir veya <Link href="/iletisim">iletişim sayfamızdaki</Link> diğer kanallardan bize ulaşabilirsiniz.
+        yazabilirsiniz.
       </p>
     </LegalPage>
   );

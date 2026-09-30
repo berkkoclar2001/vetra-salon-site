@@ -22,6 +22,8 @@ export const siteConfig = {
     whatsapp: "905316554416" as string,
     phone: "0531 655 44 16" as string,
     email: "vetraakademi@gmail.com" as string,
+    /** Üye uygulamasının destek adresi; App Store'daki destek adresiyle aynı kalmalı. */
+    memberSupportEmail: "vetra.technical@gmail.com" as string,
   },
   address: {
     street: "Atakent Mah. 235. Sk. No:19 D:6, Lounge 2 Point Çarşı",

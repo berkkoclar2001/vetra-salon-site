@@ -4,7 +4,7 @@ import LegalPage from "@/components/sections/LegalPage";
 import { fullAddress, pageMetadata, siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Kullanıcı Sözleşmesi",
+  title: "Hizmet Sözleşmesi",
   description:
     "Vetra salon yönetim panelini kullanan işletmelerle aramızdaki kurallar: hesaplar, kullanım koşulları, aylık ücret ve iptal, hizmet sürekliliği, sorumluluklar ve sözleşmenin sona ermesi.",
   path: "/kullanici-sozlesmesi",
@@ -69,7 +69,7 @@ const latePayment = [
 export default function UserAgreementPage() {
   return (
     <LegalPage
-      title="Kullanıcı Sözleşmesi"
+      title="Hizmet Sözleşmesi"
       description="Vetra salon panelini kullanan işletmelerle aramızdaki kurallar. Açık, kısa ve sitede verdiğimiz sözlerle aynı olacak şekilde yazdık."
       updated="17 Eylül 2026"
     >

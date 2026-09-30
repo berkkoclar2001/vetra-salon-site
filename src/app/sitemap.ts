@@ -9,5 +9,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   // lastModified bilinçli olarak yok: her istekte "şimdi" demek Google'ın lastmod'a güvenini düşürür.
-  return ["/", ...paths, ...legalLinks.map((l) => l.href)].map((path) => ({ url: absoluteUrl(path) }));
+  return ["/", ...paths, ...legalLinks.map((l) => l.href), "/destek"].map((path) => ({ url: absoluteUrl(path) }));
 }

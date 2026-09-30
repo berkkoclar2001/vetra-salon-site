@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
     <LegalPage
       title="Gizlilik Politikası"
       description="Salonunuzun Vetra'ya girdiği üye, ders ve ödeme kayıtları size aittir. Bu sayfada o kayıtlarla ne yaptığımızı, ne yapmadığımızı ve kontrolün nasıl sizde kaldığını anlatıyoruz."
-      updated="27 Eylül 2026"
+      updated="30 Eylül 2026"
     >
       <p>
         Bu politika, <strong>{legalName}</strong> (&quot;Vetra&quot;, &quot;biz&quot;) tarafından sunulan salon
@@ -202,9 +202,15 @@ export default function PrivacyPolicyPage() {
         olarak bildiririz.
       </p>
       <h3>Bir salonun üyesiyseniz</h3>
+      {/* Süreler uygulamadaki silme akışı ve Üye Kullanım Koşulları'yla aynı kalmalı. */}
       <p>
-        Kayıtlarınızı tutan ve silinip silinmeyeceğine karar veren, üyesi olduğunuz salondur; talebinizi öncelikle
-        salonunuza iletin. Salona ulaşamazsanız <a href={`mailto:${contact.email}`}>{contact.email}</a> adresine hangi
+        Kayıtlarınızı tutan ve silinip silinmeyeceğine karar veren, üyesi olduğunuz salondur. Hesabınızın silinmesini
+        Vetra uygulamasında <strong>Profil &gt; Profili düzenle &gt; Hesabımı Sil</strong> adımlarıyla isteyebilirsiniz.
+        Talebiniz salonunuza iletilir ve en geç 30 gün içinde tamamlanır; bu süre içinde talebinizi geri çekebilirsiniz.
+        Yedeklerdeki kopyalar da en geç 30 gün içinde silinir.
+      </p>
+      <p>
+        Uygulamaya giremiyorsanız talebinizi salonunuza iletin. Salona ulaşamazsanız <a href={`mailto:${contact.email}`}>{contact.email}</a> adresine hangi
         salonun üyesi olduğunuzu belirterek yazabilirsiniz; talebinizi ilgili salona iletir ve salonun işlemi
         yapabilmesi için gereken teknik desteği veririz. Silme işleminden sonra geçmiş üyelik, ders ve ödeme
         bilgilerinizin salon tarafından görüntülenemeyeceğini hatırlatırız.
