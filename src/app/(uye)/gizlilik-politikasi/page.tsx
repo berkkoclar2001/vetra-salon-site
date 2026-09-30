@@ -11,6 +11,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const { legalName, contact } = siteConfig;
+const memberEmail = contact.memberSupportEmail;
 
 /**
  * Salonlara verilen taahhütler. Buradaki her madde üründe ve operasyonda gerçekten karşılanabilmeli;
@@ -83,7 +84,8 @@ export default function PrivacyPolicyPage() {
     >
       <p>
         Bu politika, <strong>{legalName}</strong> (&quot;Vetra&quot;, &quot;biz&quot;) tarafından sunulan salon
-        yönetim paneline, Vetra mobil uygulamasına ve bu tanıtım sitesine uygulanır. Vetra ile yaptığınız hizmet sözleşmesinin bir parçasıdır.
+        yönetim paneline, Vetra mobil uygulamasına ve bu tanıtım sitesine uygulanır. Salonlar için Vetra ile yapılan hizmet sözleşmesinin, salon üyeleri için ise{" "}
+        <Link href="/uye-kullanim-kosullari">Üye Kullanım Koşulları</Link>&apos;nın bir parçasıdır.
         Hangi kişisel verileri hangi hukuki sebeple işlediğimizi ve 6698 sayılı Kanun&apos;dan doğan haklarınızı ayrıca{" "}
         <Link href="/kvkk">KVKK Aydınlatma Metni</Link>&apos;nde, tarayıcınızda tutulan kayıtları ise{" "}
         <Link href="/cerez-politikasi">Çerez Politikası</Link>&apos;nda bulabilirsiniz.
@@ -127,7 +129,8 @@ export default function PrivacyPolicyPage() {
       <p>
         Uygulama konum verisi toplamaz; reklam kimliği ve üçüncü taraf analitik araçları kullanmaz. Verileriniz reklam
         ya da takip amacıyla kimseyle paylaşılmaz. Hizmet sağlayıcılarımız verilerinizi yalnızca bu hizmeti sunmak için
-        ve bu politikadakine eşdeğer koruma altında işler.
+        ve bu politikadakine eşdeğer koruma altında işler. Uygulamayla ilgili sorularınız için{" "}
+        <a href={`mailto:${memberEmail}`}>{memberEmail}</a> adresine yazabilirsiniz.
       </p>
 
       <h2>4. Asla yapmadıklarımız</h2>
@@ -210,8 +213,9 @@ export default function PrivacyPolicyPage() {
         Yedeklerdeki kopyalar da en geç 30 gün içinde silinir.
       </p>
       <p>
-        Uygulamaya giremiyorsanız talebinizi salonunuza iletin. Salona ulaşamazsanız <a href={`mailto:${contact.email}`}>{contact.email}</a> adresine hangi
-        salonun üyesi olduğunuzu belirterek yazabilirsiniz; talebinizi ilgili salona iletir ve salonun işlemi
+        Uygulamaya giremiyorsanız talebinizi salonunuza iletin. Salona ulaşamazsanız{" "}
+        <a href={`mailto:${memberEmail}`}>{memberEmail}</a> adresine hangi salonun üyesi olduğunuzu ve salonda kayıtlı
+        telefon numaranızı belirterek yazabilirsiniz; talebinizi ilgili salona iletir ve salonun işlemi
         yapabilmesi için gereken teknik desteği veririz. Silme işleminden sonra geçmiş üyelik, ders ve ödeme
         bilgilerinizin salon tarafından görüntülenemeyeceğini hatırlatırız.
       </p>

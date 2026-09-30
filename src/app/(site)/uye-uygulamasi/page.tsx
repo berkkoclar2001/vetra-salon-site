@@ -4,9 +4,9 @@ import MemberApp from "@/components/sections/MemberApp";
 import PageCta from "@/components/sections/PageCta";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Spor Salonu Üye Uygulaması: Rezervasyon ve QR Giriş",
+  title: "Spor Salonu Üye Uygulaması: Ders Rezervasyonu ve Paket Takibi",
   description:
-    "Üyeleriniz ders rezervasyonunu, paket bakiyesini ve QR ile salon girişini telefonundan yapar. Salonunuzun markasıyla iOS ve Android.",
+    "Üyeleriniz ders rezervasyonunu, iptalini ve kalan ders hakkını telefonundan takip eder. iOS ve Android için ücretsiz Vetra uygulaması.",
   path: "/uye-uygulamasi",
 });
 

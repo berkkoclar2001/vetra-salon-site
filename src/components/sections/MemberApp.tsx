@@ -1,7 +1,11 @@
 import Reveal from "@/components/motion/Reveal";
-import { ArrowRight, Smartphone, CalendarCheck, Wallet2, QrCode, BellDot, Palette } from "lucide-react";
+import { ArrowRight, Smartphone, CalendarCheck, Wallet2, CalendarX, BellDot, Building2 } from "lucide-react";
 import type { SectionProps } from "./types";
 
+/**
+ * Yalnız App Store'daki uygulamada gerçekten olan özellikler yazılır (tek "Vetra" uygulaması, salona özel
+ * marka veya QR giriş yok). Uygulamada olmayan bir iddia App Store incelemesinde tutarsızlık yaratır.
+ */
 const appFeatures = [
   {
     icon: CalendarCheck,
@@ -14,19 +18,19 @@ const appFeatures = [
     text: "Kaç dersi kaldığını, üyeliğinin ne zaman bittiğini ve ödeme geçmişini kendisi görür.",
   },
   {
-    icon: QrCode,
-    title: "QR ile salona giriş",
-    text: "Girişte kartla uğraşmak yok; üye uygulamadaki QR kodunu okutur, katılım otomatik işlenir.",
+    icon: CalendarX,
+    title: "İptalini kendisi yapar",
+    text: "Üye ayırttığı dersleri tek ekranda görür, sizin belirlediğiniz süre içinde iptal eder; hakkı paketine geri döner.",
   },
   {
     icon: BellDot,
-    title: "Hatırlatma bildirimleri",
-    text: "Yaklaşan ders, biten paket ve doğum günü bildirimleri üyeye kendiliğinden gider.",
+    title: "Ders hatırlatması",
+    text: "Yaklaşan dersin hatırlatması üyenin telefonuna gelir. Üye isterse ayarlardan kapatır.",
   },
   {
-    icon: Palette,
-    title: "Salonunuzun markasıyla",
-    text: "Uygulama sizin logonuz ve renklerinizle çalışır. Üye başka bir markanın uygulamasını indirmez.",
+    icon: Building2,
+    title: "Yalnız sizin salonunuz",
+    text: "Üye ücretsiz Vetra uygulamasını indirir, sizin verdiğiniz bilgilerle girer ve yalnız sizin derslerinizi ve paketlerini görür.",
   },
 ];
 
@@ -45,8 +49,8 @@ export default function MemberApp({ headingAs: Heading = "h2" }: SectionProps) {
             </Heading>
             <p className="mt-5 text-lg leading-8 text-on-ink-muted">
               Rezervasyon, paket bakiyesi ve giriş takibi üyenin kendi elinde olduğunda resepsiyonun işi
-              yarıya iner. Üye uygulaması, salonunuzun markasıyla iOS ve Android&apos;de çalışır; panelle
-              aynı veriyi kullanır, ayrı bir sistem öğrenmeniz gerekmez.
+              yarıya iner. Üyeleriniz Vetra uygulamasını iOS ve Android&apos;de ücretsiz indirir; uygulama
+              panelle aynı veriyi kullanır, ayrı bir sistem öğrenmeniz gerekmez.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

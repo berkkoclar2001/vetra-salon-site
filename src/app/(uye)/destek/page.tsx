@@ -49,6 +49,10 @@ export default function MemberSupportPage() {
         Profil &gt; Profili düzenle &gt; Hesabımı Sil. Talep salona gider ve en geç 30 gün içinde tamamlanır. Bu süre
         içinde talebini geri çekebilirsin.
       </p>
+      <p>
+        Uygulamaya giremiyorsan <a href={`mailto:${email}`}>{email}</a> adresine salonunun adını ve salonda kayıtlı
+        telefon numaranı yazarak silme talebi gönderebilirsin.
+      </p>
 
       <h2>Bildirimler</h2>
       <p>Ders hatırlatmasını Ayarlar&apos;dan açıp kapatabilirsin.</p>

@@ -1,12 +1,12 @@
 /**
  * Sitenin mutlak adresi ve marka bilgileri.
  * Canonical, sitemap, robots, Open Graph ve JSON-LD hep buradan okur.
- * Yayında `NEXT_PUBLIC_SITE_URL` gerçek domain olmalı (ör. https://vetra.app).
+ * `NEXT_PUBLIC_SITE_URL` tanımlı değilse canlı adres kullanılır; lokal denemede gerekirse env ile ezilir.
  */
 export const siteConfig = {
   name: "Vetra",
   legalName: "Vetra App Software",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.vetrasports.com").replace(/\/$/, ""),
   title: "Spor Salonu ve Pilates Stüdyosu Yönetim Programı",
   description:
     "Pilates, yoga, fitness ve butik ders stüdyoları için üye, randevu, paket, ödeme ve raporlama operasyonunu tek panelde toplayan salon yönetim yazılımı.",

@@ -138,7 +138,9 @@ export default function KvkkPage() {
         amaçları için kullanmaz ve kimseyle paylaşmaz.
       </p>
       <p>
-        Bu verilerle ilgili bilgi, düzeltme veya silme taleplerinizi doğrudan salonunuza iletmeniz gerekir. Bize
+        Bu verilerle ilgili bilgi, düzeltme veya silme taleplerinizi doğrudan salonunuza iletmeniz gerekir. Hesabınızın
+        silinmesini Vetra uygulamasında Profil &gt; Profili düzenle &gt; Hesabımı Sil adımlarıyla da isteyebilirsiniz. Bize{" "}
+        <a href={`mailto:${contact.memberSupportEmail}`}>{contact.memberSupportEmail}</a> adresinden
         ulaşırsanız talebinizi ilgili salona yönlendirir, salonun talebinizi karşılayabilmesi için gereken teknik
         desteği sağlarız. Sağlık notu gibi özel nitelikli bilgileri kaydetmeden önce gerekli hukuki şartı sağlamak
         salonun sorumluluğundadır.
