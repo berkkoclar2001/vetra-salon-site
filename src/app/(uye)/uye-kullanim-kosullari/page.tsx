@@ -24,7 +24,7 @@ export default function MemberTermsPage() {
     <LegalPage
       title="Üye Kullanım Koşulları"
       description="Vetra üye uygulamasını kullanan salon üyeleri için kurallar. Uygulamayı kullanarak bu koşulları kabul etmiş olursunuz."
-      updated="30 Eylül 2026"
+      updated="1 Ekim 2026"
     >
       <h2>1. Taraflar ve roller</h2>
       <ul>
@@ -116,7 +116,7 @@ export default function MemberTermsPage() {
       <h2>9. Bu koşullardaki değişiklikler</h2>
       <p>
         Koşulları güncellediğimizde yeni metni bu sayfada yayımlar, sayfanın başındaki tarihi değiştiririz. Haklarınızı
-        daraltan önemli bir değişikliği yürürlüğe girmeden önce uygulama içinden duyururuz. Değişiklikten sonra
+        daraltan önemli bir değişikliği yürürlüğe girmeden önce bu sayfada duyururuz. Değişiklikten sonra
         uygulamayı kullanmaya devam etmeniz, güncel koşulları kabul ettiğiniz anlamına gelir.
       </p>
 
